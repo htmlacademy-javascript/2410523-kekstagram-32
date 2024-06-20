@@ -1,7 +1,7 @@
 # Личный проект «Кекстаграм»
 
 * Студент: [Марат Замалетдинов](https://up.htmlacademy.ru/javascript/32/user/2410523).
-* Наставник: [Дмитрий Беллавин](https://htmlacademy.ru/profile/bellavin).
+* Наставник:
 
 ---
 
