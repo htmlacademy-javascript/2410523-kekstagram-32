@@ -16,6 +16,10 @@ const makeMaxString = (charset, length) => {
 
   if (result < length && result < length) {
     return true ;
+  } else if (result === length && result === length) {
+    return true ;
+  } else if (result > length && result > length) {
+    return false ;
   }
 };
 
