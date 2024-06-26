@@ -1,35 +1,17 @@
-//Задание считается выполненным, если в проекте описаны следующие функции:
+function countMaxString (line, number) {
+  return (line.length <= number);
+}
 
-// Функция для проверки длины строки. Она принимает строку, которую нужно проверить, и максимальную длину и возвращает true, если строка меньше или равна указанной длине, и false, если строка длиннее. Эта функция нам пригодится для валидации формы. Примеры использования функции:
-// Функция для проверки, является ли строка палиндромом. Палиндром — это слово или фраза, которые одинаково читаются и слева направо и справа налево. Например:
+countMaxString();
 
-// // Строка короче 20 символов
-// имяФункции('проверяемая строка', 20); // true
-// // Длина строки ровно 18 символов
-// имяФункции('проверяемая строка', 18); // true
-// // Строка длиннее 10 символов
-// имяФункции('проверяемая строка', 10); // false
+function checksStringPalin (line) {
+  const string = line.replaceAll(' ', '').toLowerCase();
+  let empty = '';
 
-
-const makeMaxString = (charset, length) => {
-  const result = charset.length;
-
-  if (result < length && result < length) {
-    return true ;
-  } else if (result === length && result === length) {
-    return true ;
-  } else if (result > length && result > length) {
-    return false ;
+  for (let ind = string.length - 1; ind >= 0; ind --){
+    empty += string[ind];
   }
-};
+  return string === empty;
+}
 
-makeMaxString(was, 5);
-
-// Строка короче символов
-console.log(`1. Проверяемая строка: ${ makeMaxString }'<'${ length}`);
-
-// Длина строки ровно  символов
-console.log(`2. Проверяемая строка: ${ charset }'='${ length}`);
-
-// Строка длиннее  символов
-console.log(`3. Проверяемая строка: ${ charset }'>'${ length}`);
+checksStringPalin();
