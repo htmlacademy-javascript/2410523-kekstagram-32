@@ -15,8 +15,3 @@
 // }
 
 // //schecksStringPalin();
-if (true) {
-
-
-  console.log('hello!');
-}
