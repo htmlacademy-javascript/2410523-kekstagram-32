@@ -14,4 +14,4 @@ function checksStringPalin (line) {
   return string === empty;
 }
 
-//schecksStringPalin();
+checksStringPalin();
