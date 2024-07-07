@@ -116,6 +116,6 @@ const getUsersPhoto = () => Array.from(
   (_, index) => usersPhoto(index + 1)
 );
 
-console.log(getUsersPhoto());
+getUsersPhoto();
 
 
