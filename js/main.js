@@ -1,9 +1,12 @@
-const photoVolume = 25;
-const likesMin = 15;
-const likesMax = 200;
-const commentMax = 30;
-const avatarMin = 1;
-const avatarMax = 6;
+const PHOTO_VALUE = 25;
+const LIKESQTY = {
+  MIN:15,
+  MAX:200};
+const COMMENTMAX = 30;
+const AVATARS_USERS = {
+  MIN:1,
+  MAX:6
+};
 
 const descripUsers = [
   'Передо мной интересная фотография.',
@@ -91,8 +94,8 @@ const randomIdIndex = usersIdIndex();
 
 const usersComments = () =>
   ({
-    id:  randomIdIndex,
-    avatar: `img/avatar-${getRandomInteger(avatarMin, avatarMax)}.svg`,
+    id:  randomIdIndex(),
+    avatar: `img/avatar-${getRandomInteger(AVATARS_USERS.MIN, AVATARS_USERS.MAX)}.svg`,
     message: usersMessage[getRandomInteger(0, usersMessage.length - 1)],
     name: usersName[getRandomInteger(0, usersName.length - 1)]
   });
@@ -102,17 +105,17 @@ const usersPhoto = (index) => ({
   id: index,
   url: `photos/${index}.jpg`,
   description: descripUsers[getRandomInteger(1, descripUsers.length - 1)],
-  likes: getRandomInteger (likesMin, likesMax),
-  comments: Array.from({length: getRandomInteger(0, commentMax)},
+  likes: getRandomInteger(LIKESQTY.MIN, LIKESQTY.MAX),
+  comments: Array.from({length: getRandomInteger(0, COMMENTMAX)},
     usersComments)
 }
 );
 
 const getUsersPhoto = () => Array.from(
-  {length: photoVolume},
+  {length: PHOTO_VALUE},
   (_, index) => usersPhoto(index + 1)
 );
 
-getUsersPhoto();
+console.log(getUsersPhoto());
 
 
