@@ -4,17 +4,17 @@
 
 // countMaxString();
 
-function checksStringPalin (line) {
-  const string = line.replaceAll(' ', '').toLowerCase();
-  let empty = '';
+// function checksStringPalin (line) {
+//   const string = line.replaceAll(' ', '').toLowerCase();
+//   let empty = '';
 
-  for (let ind = string.length - 1; ind >= 0; ind --){
-    empty += string[ind];
-  }
-  return string === empty;
-}
+//   for (let ind = string.length - 1; ind >= 0; ind --){
+//     empty += string[ind];
+//   }
+//   return string === empty;
+// }
 
-checksStringPalin();
+// checksStringPalin();
 
 function isMeetingWithinWorkingHours(startTime, endTime, meetingStartTime, duration) {
   const startTimeParts = startTime.split(':');
