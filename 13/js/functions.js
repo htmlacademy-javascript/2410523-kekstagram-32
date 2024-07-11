@@ -1,8 +1,8 @@
-function countMaxString (line, number) {
-  return (line.length <= number);
-}
+// function countMaxString (line, number) {
+//   return (line.length <= number);
+// }
 
-countMaxString();
+// countMaxString();
 
 function checksStringPalin (line) {
   const string = line.replaceAll(' ', '').toLowerCase();
@@ -43,4 +43,4 @@ function isMeetingWithinWorkingHours(startTime, endTime, meetingStartTime, durat
   }
 }
 
-console.log(isMeetingWithinWorkingHours('08:00', '17:30', '14:00', 90));
+isMeetingWithinWorkingHours();
