@@ -16,14 +16,18 @@
 
 // checksStringPalin();
 
+function convertTime (valueTime) {
+  const valueTimeParts = valueTime.split(':');
+  const valueTimeInMinutes = parseInt(valueTimeParts[0], 10) * 60 + parseInt(valueTimeParts[1], 10);
+  return valueTimeInMinutes;
+}
+
+
 function isMeetingWithinWorkingHours(startTime, endTime, meetingStartTime, duration) {
-  const startTimeParts = startTime.split(':');
-  const endTimeParts = endTime.split(':');
+  const startTimeInMinutes = convertTime(startTime);
+  const endTimeInMinutes = convertTime(endTime);
 
-  const startTimeInMinutes = parseInt(startTimeParts[0], 10) * 60 + parseInt(startTimeParts[1], 10);
-  const endTimeInMinutes = parseInt(endTimeParts[0], 10) * 60 + parseInt(endTimeParts[1], 10);
-
-  const meetingStartTimeInMinutes = parseInt(meetingStartTime.split(':')[0], 10) * 60 + parseInt(meetingStartTime.split(':')[1], 10);
+  const meetingStartTimeInMinutes = convertTime(meetingStartTime);
 
   if (startTimeInMinutes >= endTimeInMinutes) {
     return false;
