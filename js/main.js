@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {photos} from './data.js';
 import {generateMiniatures} from './miniatures.js';
 import {generateBigPicture} from'./big-picture.js';
@@ -26,3 +27,9 @@ import {generateBigPicture} from'./big-picture.js';
 generateMiniatures(photos);
 generateBigPicture(photos);
 >>>>>>> b9891b7 (Исправления после созвона)
+=======
+import {getUsersPhoto} from './data.js';
+import {generateMiniatures} from './miniatures.js';
+
+generateMiniatures(getUsersPhoto());
+>>>>>>> f7b2044 (Сделал дз 7)

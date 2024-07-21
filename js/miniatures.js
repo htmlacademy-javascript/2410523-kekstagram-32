@@ -5,6 +5,7 @@ const createImages = (picture) => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 8731489 (Исправил ошибки  и работаю над списками комент)
   const imageElement = miniaturesTemplate.cloneNode(true);
@@ -16,11 +17,14 @@ const createImages = (picture) => {
   itemImageElement.dataset.pictureId = picture.id;
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> f7b2044 (Сделал дз 7)
   const createImage = miniaturesTemplate.cloneNode(true);
   createImage.querySelector('.picture__img').src = picture.url;
   createImage.querySelector('.picture__img').alt = picture.description;
   createImage.querySelector('.picture__likes').textContent = picture.likes;
   createImage.querySelector('.picture__comments').textContent = picture.comments.length;
+<<<<<<< HEAD
   createImage.querySelector('.picture__img').dataset.pictureId = picture.id;
 >>>>>>> 4e45a33 (Затык с заданием 8.14)
 
@@ -39,6 +43,10 @@ const createImages = (picture) => {
 
   return imageElement;
 >>>>>>> 8731489 (Исправил ошибки  и работаю над списками комент)
+=======
+
+  return createImage;
+>>>>>>> f7b2044 (Сделал дз 7)
 };
 
 
@@ -52,5 +60,9 @@ const generateMiniatures = (pictures) => {
   userImage.append(fragment);
 };
 
+<<<<<<< HEAD
 
 export{createImages, generateMiniatures};
+=======
+export{generateMiniatures};
+>>>>>>> f7b2044 (Сделал дз 7)
