@@ -102,6 +102,12 @@ const getUsersPhotos = () => Array.from(
   (_, index) => usersPhoto(index + 1)
 );
 
+<<<<<<< HEAD
 const photos = getUsersPhotos();
 
 export{photos};
+=======
+const generatePhoto = getUsersPhoto();
+
+export{generatePhoto};
+>>>>>>> 61e95ab (Работаю над 8.1 ч3)
