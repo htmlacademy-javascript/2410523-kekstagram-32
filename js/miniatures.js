@@ -22,4 +22,5 @@ const generateMiniatures = (pictures) => {
   userImage.append(fragment);
 };
 
-export{generateMiniatures};
+
+export{createImages, generateMiniatures};
