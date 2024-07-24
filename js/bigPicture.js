@@ -15,7 +15,6 @@ const bodyElements = document.querySelector('.modal-open');
 const onDocumentKeydown = (evt) => {
   if (isEscapeKey(evt)) {
     evt.preventDefault();
-    bigPictureClose();
   }
 };
 
@@ -26,17 +25,12 @@ const openBigPicture = () => {
   commentsSocial.classList.add('hidden');
   commentsLoad.classList.add('hidden');
   bodyElements.classList.add('modal-open');
-  document.addEventListener('click', () => {
-
-  });
 };
 
 
 // Закрытие модального окна
 const closeBigPicture = () => {
-  commentsSocial.classList.remove('hidden');
-  commentsLoad.classList.remove('hidden');
-  bodyElements.classList.remove('modal-open');
+
   bigPictureClose.addEventListener('click', () =>{
     bigPictureElement.classList.add('hidden');
     onDocumentKeydown();
@@ -48,18 +42,25 @@ const closeBigPicture = () => {
 
 
 //создание элементов для большого изображения
-const createBigImage = (picture) => {
-  bigPictureElement.querySelector('.img').src = generatePhoto[picture - 1].url;
-  bigPictureElement.querySelector('.likes-count').textContent = generatePhoto[picture - 1].likes;
-  bigPictureElement.querySelector('.social__comment-shown-count').textContent = generatePhoto[picture - 1].comments.length;
-  bigPictureElement.querySelector('.social__comment-total-count').textContent = generatePhoto[picture - 1].comments.length;
-  bigPictureElement.querySelector('.social__caption').textContent = generatePhoto[picture - 1].description;
+const createBigImage = (PhotoId) => {
+  bigPictureElement.querySelector('.img').src = generatePhoto[PhotoId - 1].url;
+  bigPictureElement.querySelector('.likes-count').textContent = generatePhoto[PhotoId - 1].likes;
+  bigPictureElement.querySelector('.social__comment-shown-count').textContent = generatePhoto[PhotoId - 1].comments.length;
+  bigPictureElement.querySelector('.social__comment-total-count').textContent = generatePhoto[PhotoId - 1].comments.length;
+  bigPictureElement.querySelector('.social__caption').alt = generatePhoto[PhotoId - 1].description;
+};
+
+
+const isOpenBigPicture = (evt) => {
+  if (evt.target.closest('.picture')) {
+    const isPicture = evt.target.dataset.PhotoId;
+    createBigImage(isPicture);
+    openBigPicture();
+  }
 };
 
 //Обработчик для открытия фото
-containerPictures.addEventListener('click', () => {
-  openBigPicture();
-});
+containerPictures.addEventListener('click', (isOpenBigPicture));
 
 //Обработчик для закрытия фото
 containerPictures.addEventListener('click', () =>{
