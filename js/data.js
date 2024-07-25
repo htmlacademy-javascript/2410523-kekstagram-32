@@ -109,5 +109,9 @@ export{photos};
 =======
 const generatePhoto = getUsersPhoto();
 
+<<<<<<< HEAD
 export{generatePhoto};
 >>>>>>> 61e95ab (Работаю над 8.1 ч3)
+=======
+export{generatePhoto as photos};
+>>>>>>> b9891b7 (Исправления после созвона)

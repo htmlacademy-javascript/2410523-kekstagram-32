@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {photos} from './data.js';
 import {generateMiniatures} from './miniatures.js';
 import {generateBigPicture} from'./big-picture.js';
@@ -17,3 +18,11 @@ generateMiniatures(generatePhoto);
 =======
 generateBigPicture(generatePhoto);
 >>>>>>> 4e45a33 (Затык с заданием 8.14)
+=======
+import {photos} from './data.js';
+import {generateMiniatures} from './miniatures.js';
+import {generateBigPicture} from'./big-picture.js';
+
+generateMiniatures(photos);
+generateBigPicture(photos);
+>>>>>>> b9891b7 (Исправления после созвона)

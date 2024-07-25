@@ -3,6 +3,7 @@ const miniaturesTemplate = document.querySelector('#picture').content.querySelec
 
 const createImages = (picture) => {
 <<<<<<< HEAD
+<<<<<<< HEAD
   const imageElement = miniaturesTemplate.cloneNode(true);
   const itemImageElement = imageElement.querySelector('.picture__img');
   itemImageElement.src = picture.url;
@@ -20,6 +21,16 @@ const createImages = (picture) => {
 >>>>>>> 4e45a33 (Затык с заданием 8.14)
 
   return imageElement;
+=======
+  const photosElement = miniaturesTemplate.cloneNode(true);
+  photosElement.querySelector('.picture__img').src = picture.url;
+  photosElement.querySelector('.picture__img').alt = picture.description;
+  photosElement.querySelector('.picture__likes').textContent = picture.likes;
+  photosElement.querySelector('.picture__comments').textContent = picture.comments.length;
+  photosElement.querySelector('.picture__img').dataset.pictureId = picture.id;
+
+  return photosElement;
+>>>>>>> b9891b7 (Исправления после созвона)
 };
 
 
