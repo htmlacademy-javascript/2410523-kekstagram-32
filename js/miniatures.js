@@ -7,6 +7,7 @@ const createImages = (picture) => {
   createImage.querySelector('.picture__img').alt = picture.description;
   createImage.querySelector('.picture__likes').textContent = picture.likes;
   createImage.querySelector('.picture__comments').textContent = picture.comments.length;
+  createImage.querySelector('.picture__img').dataset.pictureId = picture.id;
 
   return createImage;
 };
