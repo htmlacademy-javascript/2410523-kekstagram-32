@@ -52,7 +52,7 @@ const generateBigPicture = (fullPicture) => {
 
   //создание элементов для большого изображения
   const getBigPicture = (pictureId) => {
-    const index = fullPicture.findIndex((picture) => picture.id.toString() === pictureId);
+    const index = photos.findIndex((picture) => picture.id.toString() === pictureId);
     const { url, likes, comments, description} = fullPicture[index];
 
 
@@ -80,7 +80,7 @@ const generateBigPicture = (fullPicture) => {
 
 
   //Обработчик для открытия фото
-  containerPictures.addEventListener('click', onClickPhoto());
+  containerPictures.addEventListener('click', onClickPhoto);
 
   //Обработчик для закрытия фото
 

@@ -104,4 +104,4 @@ const getUsersPhoto = () => Array.from(
 
 const generatePhoto = getUsersPhoto();
 
-export{generatePhoto};
+export{generatePhoto as photos};
