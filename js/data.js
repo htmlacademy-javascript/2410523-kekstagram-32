@@ -97,11 +97,11 @@ const usersPhoto = (index) => ({
 }
 );
 
-const getUsersPhoto = () => Array.from(
+const getUsersPhotos = () => Array.from(
   {length: PHOTO_VALUE},
   (_, index) => usersPhoto(index + 1)
 );
 
-const generatePhoto = getUsersPhoto();
+const photos = getUsersPhotos();
 
-export{generatePhoto as photos};
+export{photos};

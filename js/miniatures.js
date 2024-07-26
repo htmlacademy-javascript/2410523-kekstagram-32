@@ -2,14 +2,15 @@ const userImage = document.querySelector('.pictures');
 const miniaturesTemplate = document.querySelector('#picture').content.querySelector('.picture');
 
 const createImages = (picture) => {
-  const photosElement = miniaturesTemplate.cloneNode(true);
-  photosElement.querySelector('.picture__img').src = picture.url;
-  photosElement.querySelector('.picture__img').alt = picture.description;
-  photosElement.querySelector('.picture__likes').textContent = picture.likes;
-  photosElement.querySelector('.picture__comments').textContent = picture.comments.length;
-  photosElement.querySelector('.picture__img').dataset.pictureId = picture.id;
+  const imageElement = miniaturesTemplate.cloneNode(true);
+  const itemImageElement = imageElement.querySelector('.picture__img');
+  itemImageElement.src = picture.url;
+  itemImageElement.alt = picture.description;
+  imageElement.querySelector('.picture__likes').textContent = picture.likes;
+  imageElement.querySelector('.picture__comments').textContent = picture.comments.length;
+  itemImageElement.dataset.pictureId = picture.id;
 
-  return photosElement;
+  return imageElement;
 };
 
 
