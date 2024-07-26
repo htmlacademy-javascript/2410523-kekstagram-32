@@ -4,6 +4,9 @@ const miniaturesTemplate = document.querySelector('#picture').content.querySelec
 const createImages = (picture) => {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8731489 (Исправил ошибки  и работаю над списками комент)
   const imageElement = miniaturesTemplate.cloneNode(true);
   const itemImageElement = imageElement.querySelector('.picture__img');
   itemImageElement.src = picture.url;
@@ -11,6 +14,7 @@ const createImages = (picture) => {
   imageElement.querySelector('.picture__likes').textContent = picture.likes;
   imageElement.querySelector('.picture__comments').textContent = picture.comments.length;
   itemImageElement.dataset.pictureId = picture.id;
+<<<<<<< HEAD
 =======
   const createImage = miniaturesTemplate.cloneNode(true);
   createImage.querySelector('.picture__img').src = picture.url;
@@ -31,6 +35,10 @@ const createImages = (picture) => {
 
   return photosElement;
 >>>>>>> b9891b7 (Исправления после созвона)
+=======
+
+  return imageElement;
+>>>>>>> 8731489 (Исправил ошибки  и работаю над списками комент)
 };
 
 
