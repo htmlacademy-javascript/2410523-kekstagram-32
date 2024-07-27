@@ -26,6 +26,7 @@ const generateBigPicture = (photos) => {
   const closeBigPictureElement = document.querySelector('.big-picture__cancel');
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   // commentCountElement.classList.add('hidden');
   // commentLoaderElement.classList.add('hidden');
   // const closeBigPicture = () => {
@@ -39,6 +40,8 @@ const generateBigPicture = (photos) => {
   commentsSocial.classList.add('hidden');
   commentsLoad.classList.add('hidden');
 >>>>>>> 8731489 (Исправил ошибки  и работаю над списками комент)
+=======
+>>>>>>> 2747420 (сделал коменты 8.15)
 
   //обработчик закрытия Esс
   const onDocumentKeydown = (evt) => {
@@ -62,6 +65,7 @@ const generateBigPicture = (photos) => {
     bigPictureElement.classList.remove('hidden');
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     document.body.classList.add('modal-open');
 =======
     commentsSocial.classList.add('hidden');
@@ -71,6 +75,11 @@ const generateBigPicture = (photos) => {
 =======
     bodyElement.classList.add('modal-open');
 >>>>>>> 8731489 (Исправил ошибки  и работаю над списками комент)
+=======
+    document.classList.add('modal-open');
+    commentsSocial.classList.add('hidden');
+    commentsLoad.classList.add('hidden');
+>>>>>>> 2747420 (сделал коменты 8.15)
     document.addEventListener('keydown', onDocumentKeydown);
   };
 
