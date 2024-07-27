@@ -11,8 +11,6 @@ const generateBigPicture = (photos) => {
   const bodyElement = document.querySelector('.modal-open');
   const closeBigPictureElement = document.querySelector('.big-picture__cancel');
 
-  commentsSocial.classList.add('hidden');
-  commentsLoad.classList.add('hidden');
 
   //обработчик закрытия Esс
   const onDocumentKeydown = (evt) => {
@@ -27,7 +25,9 @@ const generateBigPicture = (photos) => {
   // открытие модального окна
   const openBigPicture = () => {
     bigPictureElement.classList.remove('hidden');
-    bodyElement.classList.add('modal-open');
+    document.classList.add('modal-open');
+    commentsSocial.classList.add('hidden');
+    commentsLoad.classList.add('hidden');
     document.addEventListener('keydown', onDocumentKeydown);
   };
 
