@@ -2,13 +2,15 @@ const userImage = document.querySelector('.pictures');
 const miniaturesTemplate = document.querySelector('#picture').content.querySelector('.picture');
 
 const createImages = (picture) => {
-  const createImage = miniaturesTemplate.cloneNode(true);
-  createImage.querySelector('.picture__img').src = picture.url;
-  createImage.querySelector('.picture__img').alt = picture.description;
-  createImage.querySelector('.picture__likes').textContent = picture.likes;
-  createImage.querySelector('.picture__comments').textContent = picture.comments.length;
+  const imageElement = miniaturesTemplate.cloneNode(true);
+  const itemImageElement = imageElement.querySelector('.picture__img');
+  itemImageElement.src = picture.url;
+  itemImageElement.alt = picture.description;
+  imageElement.querySelector('.picture__likes').textContent = picture.likes;
+  imageElement.querySelector('.picture__comments').textContent = picture.comments.length;
+  itemImageElement.dataset.pictureId = picture.id;
 
-  return createImage;
+  return imageElement;
 };
 
 
@@ -22,4 +24,5 @@ const generateMiniatures = (pictures) => {
   userImage.append(fragment);
 };
 
-export{generateMiniatures};
+
+export{createImages, generateMiniatures};
