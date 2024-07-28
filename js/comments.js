@@ -21,7 +21,8 @@ const getUserComment = ({avatar, name, message }) => {
   return itemComment;
 };
 
-const loadComments = () => {
+//  загрузка по 5 коментариев.
+const getLoadComments = () => {
   const endIndex = Math.min(startIndex + NEXT_NUBERS_QTY, numbersComments.length);
   commetsShownElement.textContent = endIndex;
 
@@ -32,33 +33,19 @@ const loadComments = () => {
   startIndex += NEXT_NUBERS_QTY;
   if (endIndex >= numbersComments.length) {
     commentsLoadElement.classList.add('hidden');
-
   }
-
-
-  //   commentsTotalElement.textContent = numbersComments;
-  //   commetsShownElement.textContent = endIndex;
-
 };
 
-//создание списка коментов
+//создание списка коментариев
 const getListComments = (element) => {
-//   const listFragmentElement = document.createDocumentFragment();
-//   comments.forEach((element) => {
-//     const commentsElement = getUserComment(element);
-//     listFragmentElement.append(commentsElement);
-//   });
   startIndex = 0;
   numbersComments = element;
   socialListComments.innerHTML = '';
   commentsLoadElement.classList.remove('hidden');
   commentsTotalElement.textContent = element.length;
-  //socialListComments.append(listFragmentElement);
-  loadComments();
-
+  getLoadComments();
   //Добавляем обработчик на открытие 5 след коментариев
-  commentsLoadElement.addEventListener('click', loadComments);
-
+  commentsLoadElement.addEventListener('click', getLoadComments);
 };
 
 export { getListComments };

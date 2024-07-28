@@ -1,7 +1,6 @@
 import { isEscapeKey } from './utils.js';
 import { getListComments } from './comments.js';
 
-//import {createImages, generateMiniatures} from './miniatures.js';
 const generateBigPicture = (photos) => {
   const containerPictures = document.querySelector('.pictures');
   const bigPictureElement = document.querySelector('.big-picture');
@@ -39,11 +38,8 @@ const generateBigPicture = (photos) => {
       bigPictureElement.classList.add('hidden');
       bodyElement.classList.remove('modal-open');
       bodyElement.classList.removeEventListener('keydown',onDocumentKeydown);
-
     });
-
   };
-
 
   //создание элементов для большого изображения
   const getBigPicture = (pictureId) => {
@@ -58,8 +54,7 @@ const generateBigPicture = (photos) => {
     getListComments(photos[index].comments);
   };
 
-
-  //* функция при клике на миниатюру
+  // функция при клике на миниатюру
   const onClickPhoto = (evt) => {
     const pictureElement = evt.target.closest('.picture');
     if (pictureElement){
@@ -74,11 +69,9 @@ const generateBigPicture = (photos) => {
   containerPictures.addEventListener('click', onClickPhoto);
 
   //Обработчик для закрытия фото
-
   closeBigPictureElement.addEventListener('click', () =>{
     closeBigPicture();
   });
 };
-
 
 export {generateBigPicture};
