@@ -41,11 +41,16 @@ const getUserComment = ({avatar, name, message }) => {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 //  загрузка по 5 коментариев.
 const getLoadComments = () => {
 =======
 const loadComments = () => {
 >>>>>>> 2747420 (сделал коменты 8.15)
+=======
+//  загрузка по 5 коментариев.
+const getLoadComments = () => {
+>>>>>>> 7138da7 (Отправляю на провекру 8.14 и 8.15)
   const endIndex = Math.min(startIndex + NEXT_NUBERS_QTY, numbersComments.length);
   commetsShownElement.textContent = endIndex;
 
@@ -56,6 +61,7 @@ const loadComments = () => {
   startIndex += NEXT_NUBERS_QTY;
   if (endIndex >= numbersComments.length) {
     commentsLoadElement.classList.add('hidden');
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
 };
@@ -73,22 +79,14 @@ const getListComments = (element) => {
 =======
 =======
 
+=======
+>>>>>>> 7138da7 (Отправляю на провекру 8.14 и 8.15)
   }
-
-
-  //   commentsTotalElement.textContent = numbersComments;
-  //   commetsShownElement.textContent = endIndex;
-
 };
 >>>>>>> 2747420 (сделал коменты 8.15)
 
-//создание списка коментов
+//создание списка коментариев
 const getListComments = (element) => {
-//   const listFragmentElement = document.createDocumentFragment();
-//   comments.forEach((element) => {
-//     const commentsElement = getUserComment(element);
-//     listFragmentElement.append(commentsElement);
-//   });
   startIndex = 0;
   numbersComments = element;
   socialListComments.innerHTML = '';
@@ -98,13 +96,15 @@ const getListComments = (element) => {
 =======
   commentsLoadElement.classList.remove('hidden');
   commentsTotalElement.textContent = element.length;
-  //socialListComments.append(listFragmentElement);
-  loadComments();
-
+  getLoadComments();
   //Добавляем обработчик на открытие 5 след коментариев
+<<<<<<< HEAD
   commentsLoadElement.addEventListener('click', loadComments);
 
 >>>>>>> 2747420 (сделал коменты 8.15)
+=======
+  commentsLoadElement.addEventListener('click', getLoadComments);
+>>>>>>> 7138da7 (Отправляю на провекру 8.14 и 8.15)
 };
 
 export { getListComments };

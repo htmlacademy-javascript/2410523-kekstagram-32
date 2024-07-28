@@ -3,6 +3,7 @@ import { isEscapeKey } from './utils.js';
 <<<<<<< HEAD
 import { getListComments } from './comments.js';
 
+<<<<<<< HEAD
 const generateBigPicture = (photos) => {
   const containerPictures = document.querySelector('.pictures');
   const bigPictureElement = document.querySelector('.big-picture');
@@ -16,6 +17,8 @@ import { getListComments } from './comments.js';
 >>>>>>> 8731489 (Исправил ошибки  и работаю над списками комент)
 
 //import {createImages, generateMiniatures} from './miniatures.js';
+=======
+>>>>>>> 7138da7 (Отправляю на провекру 8.14 и 8.15)
 const generateBigPicture = (photos) => {
   const containerPictures = document.querySelector('.pictures');
   const bigPictureElement = document.querySelector('.big-picture');
@@ -106,12 +109,13 @@ const generateBigPicture = (photos) => {
 =======
       bodyElement.classList.remove('modal-open');
       bodyElement.classList.removeEventListener('keydown',onDocumentKeydown);
+<<<<<<< HEAD
 
 >>>>>>> 8731489 (Исправил ошибки  и работаю над списками комент)
+=======
+>>>>>>> 7138da7 (Отправляю на провекру 8.14 и 8.15)
     });
-
   };
-
 
   //создание элементов для большого изображения
   const getBigPicture = (pictureId) => {
@@ -136,6 +140,7 @@ const generateBigPicture = (photos) => {
   };
 
   // функция при клике на миниатюру
+<<<<<<< HEAD
   const onClickPhoto = (evt) => {
     const pictureElement = evt.target.closest('.picture');
     if (pictureElement){
@@ -148,6 +153,8 @@ const generateBigPicture = (photos) => {
 
 
   //* функция при клике на миниатюру
+=======
+>>>>>>> 7138da7 (Отправляю на провекру 8.14 и 8.15)
   const onClickPhoto = (evt) => {
     const pictureElement = evt.target.closest('.picture');
     if (pictureElement){
@@ -169,6 +176,7 @@ const generateBigPicture = (photos) => {
   containerPictures.addEventListener('click', onClickPhoto);
 
   //Обработчик для закрытия фото
+<<<<<<< HEAD
 =======
   containerPictures.addEventListener('click', onClickPhoto());
 =======
@@ -178,13 +186,18 @@ const generateBigPicture = (photos) => {
   //Обработчик для закрытия фото
 
 >>>>>>> 4e45a33 (Затык с заданием 8.14)
+=======
+>>>>>>> 7138da7 (Отправляю на провекру 8.14 и 8.15)
   closeBigPictureElement.addEventListener('click', () =>{
     closeBigPicture();
   });
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 4e45a33 (Затык с заданием 8.14)
+=======
+>>>>>>> 7138da7 (Отправляю на провекру 8.14 и 8.15)
 export {generateBigPicture};
