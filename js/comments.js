@@ -1,7 +1,12 @@
+<<<<<<< HEAD
 
 const socialListComments = document.querySelector('.social__comments');
 const socialCommentElement = document.querySelector('.social__comment');
 const socialPictureElement = document.querySelector('.social__picture');
+=======
+const socialListComments = document.querySelector('.social__comments');
+const socialCommentElement = document.querySelector('.social__comment');
+>>>>>>> acfe163412aa14f3c32e147a4c7338c282007419
 const commentsLoadElement = document.querySelector('.comments-loader');
 const commetsShownElement = document.querySelector('.social__comment-shown-count');
 const commentsTotalElement = document.querySelector('.social__comment-total-count');
@@ -14,6 +19,10 @@ let startIndex = 0;
 //создание 1 комента
 const getUserComment = ({avatar, name, message }) => {
   const itemComment = socialCommentElement.cloneNode(true);
+<<<<<<< HEAD
+=======
+  const socialPictureElement = itemComment.querySelector('.social__picture');
+>>>>>>> acfe163412aa14f3c32e147a4c7338c282007419
   socialPictureElement.src = avatar;
   socialPictureElement.alt = name;
   itemComment.querySelector('.social__text').textContent = message;
