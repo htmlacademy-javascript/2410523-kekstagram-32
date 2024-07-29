@@ -1,4 +1,6 @@
-import {getUsersPhoto} from './data.js';
+import {photos} from './data.js';
 import {generateMiniatures} from './miniatures.js';
+import {generateBigPicture} from'./big-picture.js';
 
-generateMiniatures(getUsersPhoto());
+generateMiniatures(photos);
+generateBigPicture(photos);

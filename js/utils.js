@@ -14,5 +14,7 @@ const usersIdIndex = () => {
 };
 
 const randomIdIndex = usersIdIndex();
+const isEscapeKey = (evt) => evt.key === 'Escape';
 
-export {getRandomInteger, randomIdIndex};
+
+export {getRandomInteger, randomIdIndex, isEscapeKey};
