@@ -6,8 +6,11 @@ const createImages = (picture) => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 8731489 (Исправил ошибки  и работаю над списками комент)
+=======
+>>>>>>> 10cd37f (fixed fixed 5.15)
   const imageElement = miniaturesTemplate.cloneNode(true);
   const itemImageElement = imageElement.querySelector('.picture__img');
   itemImageElement.src = picture.url;
@@ -15,6 +18,7 @@ const createImages = (picture) => {
   imageElement.querySelector('.picture__likes').textContent = picture.likes;
   imageElement.querySelector('.picture__comments').textContent = picture.comments.length;
   itemImageElement.dataset.pictureId = picture.id;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -47,6 +51,10 @@ const createImages = (picture) => {
 
   return createImage;
 >>>>>>> f7b2044 (Сделал дз 7)
+=======
+
+  return imageElement;
+>>>>>>> 10cd37f (fixed fixed 5.15)
 };
 
 
@@ -61,8 +69,13 @@ const generateMiniatures = (pictures) => {
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 export{createImages, generateMiniatures};
 =======
 export{generateMiniatures};
 >>>>>>> f7b2044 (Сделал дз 7)
+=======
+
+export{createImages, generateMiniatures};
+>>>>>>> 10cd37f (fixed fixed 5.15)

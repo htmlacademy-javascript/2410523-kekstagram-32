@@ -1,12 +1,16 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 10cd37f (fixed fixed 5.15)
 import {photos} from './data.js';
 import {generateMiniatures} from './miniatures.js';
 import {generateBigPicture} from'./big-picture.js';
 
 generateMiniatures(photos);
 generateBigPicture(photos);
+<<<<<<< HEAD
 =======
 import {generatePhoto} from './data.js';
 import {generateMiniatures} from './miniatures.js';
@@ -33,3 +37,5 @@ import {generateMiniatures} from './miniatures.js';
 
 generateMiniatures(getUsersPhoto());
 >>>>>>> f7b2044 (Сделал дз 7)
+=======
+>>>>>>> 10cd37f (fixed fixed 5.15)
