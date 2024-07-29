@@ -23,12 +23,6 @@ const generateBigPicture = (photos) => {
   const containerPictures = document.querySelector('.pictures');
   const bigPictureElement = document.querySelector('.big-picture');
   const bigPictureClose = document.querySelector('.big-picture__cancel');
-<<<<<<< HEAD
-  const commentsSocial = document.querySelector('.social__comment-count');
-  const commentsLoad = document.querySelector('.comments-loader');
-  const bodyElement = document.querySelector('.modal-open');
-=======
->>>>>>> acfe163412aa14f3c32e147a4c7338c282007419
   const closeBigPictureElement = document.querySelector('.big-picture__cancel');
 
 <<<<<<< HEAD
@@ -73,6 +67,7 @@ const generateBigPicture = (photos) => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     document.body.classList.add('modal-open');
 =======
     commentsSocial.classList.add('hidden');
@@ -95,6 +90,9 @@ const generateBigPicture = (photos) => {
     document.body.classList.add('modal-open');
 >>>>>>> acfe163412aa14f3c32e147a4c7338c282007419
 >>>>>>> 1e0a156 (123)
+=======
+    document.body.classList.add('modal-open');
+>>>>>>> c55eb1d (8.15)
     document.addEventListener('keydown', onDocumentKeydown);
   };
 
@@ -104,6 +102,7 @@ const generateBigPicture = (photos) => {
 
     bigPictureClose.addEventListener('click', () =>{
       bigPictureElement.classList.add('hidden');
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -117,6 +116,10 @@ const generateBigPicture = (photos) => {
       document.removeEventListener('keydown',onDocumentKeydown);
 >>>>>>> acfe163412aa14f3c32e147a4c7338c282007419
 >>>>>>> 1e0a156 (123)
+=======
+      document.body.classList.remove('modal-open');
+      document.removeEventListener('keydown',onDocumentKeydown);
+>>>>>>> c55eb1d (8.15)
     });
   };
 
