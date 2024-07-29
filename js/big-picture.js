@@ -23,9 +23,12 @@ const generateBigPicture = (photos) => {
   const containerPictures = document.querySelector('.pictures');
   const bigPictureElement = document.querySelector('.big-picture');
   const bigPictureClose = document.querySelector('.big-picture__cancel');
+<<<<<<< HEAD
   const commentsSocial = document.querySelector('.social__comment-count');
   const commentsLoad = document.querySelector('.comments-loader');
   const bodyElement = document.querySelector('.modal-open');
+=======
+>>>>>>> acfe163412aa14f3c32e147a4c7338c282007419
   const closeBigPictureElement = document.querySelector('.big-picture__cancel');
 
 <<<<<<< HEAD
@@ -69,6 +72,7 @@ const generateBigPicture = (photos) => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     document.body.classList.add('modal-open');
 =======
     commentsSocial.classList.add('hidden');
@@ -83,6 +87,14 @@ const generateBigPicture = (photos) => {
     commentsSocial.classList.add('hidden');
     commentsLoad.classList.add('hidden');
 >>>>>>> 2747420 (сделал коменты 8.15)
+=======
+    document.classList.add('modal-open');
+    commentsSocial.classList.add('hidden');
+    commentsLoad.classList.add('hidden');
+=======
+    document.body.classList.add('modal-open');
+>>>>>>> acfe163412aa14f3c32e147a4c7338c282007419
+>>>>>>> 1e0a156 (123)
     document.addEventListener('keydown', onDocumentKeydown);
   };
 
@@ -94,8 +106,17 @@ const generateBigPicture = (photos) => {
       bigPictureElement.classList.add('hidden');
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       document.body.classList.remove('modal-open');
       document.removeEventListener('keydown',onDocumentKeydown);
+=======
+      bodyElement.classList.remove('modal-open');
+      bodyElement.classList.removeEventListener('keydown',onDocumentKeydown);
+=======
+      document.body.classList.remove('modal-open');
+      document.removeEventListener('keydown',onDocumentKeydown);
+>>>>>>> acfe163412aa14f3c32e147a4c7338c282007419
+>>>>>>> 1e0a156 (123)
     });
   };
 
