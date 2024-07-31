@@ -1,5 +1,3 @@
-//import { isEscapeKey } from './utils';
-
 const body = document.querySelector('body');
 const form = document.querySelector('.img-upload__form');
 const uploadInputElement = form.querySelector('.img-upload__input');
@@ -17,21 +15,11 @@ const errorText = {
 };
 
 const pristine = new Pristine(form, {
-  classTo: 'img-uplosd__field-wrapper',
+  classTo: 'img-upload__field-wrapper',
   errorTextParent: 'img-upload__field-wrapper',
   errorTextClass: 'img-upload__field-wrapper--error',
 });
 
-
-//обработчик закрытия Esс
-function onDocumentKeydown (evt) {
-  // eslint-disable-next-line no-use-before-define
-  if (evt.key === 'Escape' && !isTextFocused()) {
-    evt.preventDefault();
-    // eslint-disable-next-line no-use-before-define
-    getCloseLoad();
-  }
-}
 
 const getLoadImage = () => {
   uploadOverlayElement.classList.remove('hidden');
@@ -65,12 +53,6 @@ const hasUniqueTags = (value) => {
   return lowerCaseTags.length === new Set(lowerCaseTags).size;
 };
 
-const onFormSubmit = (evt) => {
-  const isValid = pristine.validate();
-  if(!isValid){
-    evt.preventDefault();
-  }
-};
 
 const onPopupClose = () => {
   getCloseLoad();
@@ -81,26 +63,42 @@ const onPopupOpen = () => {
 };
 
 pristine.addValidator(
-  uploadInputElement,
+  inputHeshtagsElement,
   hasValidCount,
   errorText.INVALID_COUNT,
   3,
   true
 );
 pristine.addValidator(
-  uploadInputElement,
+  inputHeshtagsElement,
   hasUniqueTags,
   errorText.NOT_UNIQUE,
   2,
   true
 );
 pristine.addValidator(
-  uploadInputElement,
+  inputHeshtagsElement,
   hasValidTags,
   errorText.INVALID_PATTERN,
   1,
   true
 );
+
+const onFormSubmit = (evt) => {
+  const isValid = pristine.validate();
+  if(!isValid){
+    evt.preventDefault();
+  }
+};
+
+//обработчик закрытия Esс
+function onDocumentKeydown (evt) {
+  // eslint-disable-next-line no-use-before-define
+  if (evt.key === 'Escape' && !isTextFocused()) {
+    evt.preventDefault();
+    getCloseLoad();
+  }
+}
 
 uploadInputElement.addEventListener('change', onPopupOpen);
 buttonCloseUploadElement.addEventListener('click', onPopupClose);
