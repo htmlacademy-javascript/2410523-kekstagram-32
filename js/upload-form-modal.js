@@ -1,15 +1,12 @@
 //import { isEscapeKey } from './utils';
 
-const body = document.querySelector('.body');
+const body = document.querySelector('body');
 const form = document.querySelector('.img-upload__form');
 const uploadInputElement = form.querySelector('.img-upload__input');
 const uploadOverlayElement = form.querySelector('.img-upload__overlay');
 const buttonCloseUploadElement = form.querySelector('.img-upload__cancel');
 const inputHeshtagsElement = form.querySelector('.text__hashtags');
 const textCommentsElement = form.querySelector('.text__description');
-//const inputContainerElement = document.querySelector('.img-upload__field-wrapper');
-//const MAX_LENGTH_COMMENT = 140;
-//const MAX_LENGTH_HASHTAG = 20;
 
 const MAX_HASHTAGS = 5;
 const VALID_SYMBOLS = /^#[a-zа-яё0-9]{1,19}$/i;
@@ -42,14 +39,12 @@ const getLoadImage = () => {
   document.addEventListener('keydown', onDocumentKeydown);
 };
 
-
 const getCloseLoad = () => {
   pristine.reset();
   form.reset();
   uploadOverlayElement.classList.add('hidden');
   body.classList.remove('modal-open');
   document.removeEventListener('keydown', onDocumentKeydown);
-  //buttonCloseUploadElement.addEventListener('click', onPopupClose);
 };
 
 const isTextFocused = () =>
@@ -110,6 +105,4 @@ pristine.addValidator(
 uploadInputElement.addEventListener('change', onPopupOpen);
 buttonCloseUploadElement.addEventListener('click', onPopupClose);
 form.addEventListener('submit', onFormSubmit);
-
-//export {getLoadImage, getCloseLoad};
 

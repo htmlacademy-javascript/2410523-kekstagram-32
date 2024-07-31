@@ -1,3 +1,0 @@
-
-
-//pristine.addValidation(uploadInputElement,);
