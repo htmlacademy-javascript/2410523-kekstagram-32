@@ -102,22 +102,6 @@ const getUsersPhotos = () => Array.from(
   (_, index) => usersPhoto(index + 1)
 );
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 const photos = getUsersPhotos();
 
 export{photos};
-=======
-const generatePhoto = getUsersPhoto();
-
-<<<<<<< HEAD
-export{generatePhoto};
->>>>>>> 61e95ab (Работаю над 8.1 ч3)
-=======
-export{generatePhoto as photos};
->>>>>>> b9891b7 (Исправления после созвона)
-=======
-const photos = getUsersPhotos();
-
-export{photos};
->>>>>>> 8731489 (Исправил ошибки  и работаю над списками комент)
