@@ -68,6 +68,7 @@ const generateBigPicture = (photos) => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     document.body.classList.add('modal-open');
 =======
     commentsSocial.classList.add('hidden');
@@ -93,6 +94,9 @@ const generateBigPicture = (photos) => {
 =======
     document.body.classList.add('modal-open');
 >>>>>>> c55eb1d (8.15)
+=======
+    document.body.classList.add('modal-open');
+>>>>>>> 453059b746f2b6e241cc728ebcaffca50baaadf7
     document.addEventListener('keydown', onDocumentKeydown);
   };
 
@@ -102,6 +106,7 @@ const generateBigPicture = (photos) => {
 
     bigPictureClose.addEventListener('click', () =>{
       bigPictureElement.classList.add('hidden');
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -120,6 +125,10 @@ const generateBigPicture = (photos) => {
       document.body.classList.remove('modal-open');
       document.removeEventListener('keydown',onDocumentKeydown);
 >>>>>>> c55eb1d (8.15)
+=======
+      document.body.classList.remove('modal-open');
+      document.removeEventListener('keydown',onDocumentKeydown);
+>>>>>>> 453059b746f2b6e241cc728ebcaffca50baaadf7
     });
   };
 

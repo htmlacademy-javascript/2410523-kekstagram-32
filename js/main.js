@@ -7,9 +7,11 @@
 import {photos} from './data.js';
 import {generateMiniatures} from './miniatures.js';
 import {generateBigPicture} from'./big-picture.js';
+import './upload-form-modal.js';
 
 generateMiniatures(photos);
 generateBigPicture(photos);
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 import {generatePhoto} from './data.js';
@@ -39,3 +41,6 @@ generateMiniatures(getUsersPhoto());
 >>>>>>> f7b2044 (Сделал дз 7)
 =======
 >>>>>>> 10cd37f (fixed fixed 5.15)
+=======
+
+>>>>>>> 453059b746f2b6e241cc728ebcaffca50baaadf7

@@ -3,6 +3,7 @@ const socialCommentElement = document.querySelector('.social__comment');
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 const socialPictureElement = document.querySelector('.social__picture');
 =======
@@ -12,6 +13,8 @@ const socialCommentElement = document.querySelector('.social__comment');
 >>>>>>> 1e0a156 (123)
 =======
 >>>>>>> c55eb1d (8.15)
+=======
+>>>>>>> 453059b746f2b6e241cc728ebcaffca50baaadf7
 const commentsLoadElement = document.querySelector('.comments-loader');
 const commetsShownElement = document.querySelector('.social__comment-shown-count');
 const commentsTotalElement = document.querySelector('.social__comment-total-count');
@@ -41,6 +44,7 @@ const getUserComment = ({avatar, name, message }) => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   const socialPictureElement = itemComment.querySelector('.social__picture');
 =======
 >>>>>>> 8731489 (Исправил ошибки  и работаю над списками комент)
@@ -52,6 +56,9 @@ const getUserComment = ({avatar, name, message }) => {
 =======
   const socialPictureElement = itemComment.querySelector('.social__picture');
 >>>>>>> c55eb1d (8.15)
+=======
+  const socialPictureElement = itemComment.querySelector('.social__picture');
+>>>>>>> 453059b746f2b6e241cc728ebcaffca50baaadf7
   socialPictureElement.src = avatar;
   socialPictureElement.alt = name;
   itemComment.querySelector('.social__text').textContent = message;
