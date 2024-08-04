@@ -1,3 +1,6 @@
+import { initEffectPicture, resetEffectPicture } from './effect-picture';
+import { resetScalePicture } from './scale-picture';
+
 const body = document.querySelector('body');
 const form = document.querySelector('.img-upload__form');
 const uploadInputElement = form.querySelector('.img-upload__input');
@@ -30,6 +33,8 @@ const getLoadImage = () => {
 const getCloseLoad = () => {
   pristine.reset();
   form.reset();
+  resetScalePicture();
+  resetEffectPicture();
   uploadOverlayElement.classList.add('hidden');
   body.classList.remove('modal-open');
   document.removeEventListener('keydown', onDocumentKeydown);
@@ -103,4 +108,4 @@ function onDocumentKeydown (evt) {
 uploadInputElement.addEventListener('change', onPopupOpen);
 buttonCloseUploadElement.addEventListener('click', onPopupClose);
 form.addEventListener('submit', onFormSubmit);
-
+initEffectPicture();
