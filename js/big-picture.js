@@ -1,60 +1,18 @@
 import { isEscapeKey } from './utils.js';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { getListComments } from './comments.js';
 
-<<<<<<< HEAD
 const generateBigPicture = (photos) => {
   const containerPictures = document.querySelector('.pictures');
   const bigPictureElement = document.querySelector('.big-picture');
   const bigPictureClose = document.querySelector('.big-picture__cancel');
   const closeBigPictureElement = document.querySelector('.big-picture__cancel');
 
-=======
-
-=======
-import { getListComments } from './comments.js';
->>>>>>> 8731489 (Исправил ошибки  и работаю над списками комент)
-
-//import {createImages, generateMiniatures} from './miniatures.js';
-=======
->>>>>>> 7138da7 (Отправляю на провекру 8.14 и 8.15)
-const generateBigPicture = (photos) => {
-  const containerPictures = document.querySelector('.pictures');
-  const bigPictureElement = document.querySelector('.big-picture');
-  const bigPictureClose = document.querySelector('.big-picture__cancel');
-  const closeBigPictureElement = document.querySelector('.big-picture__cancel');
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-  // commentCountElement.classList.add('hidden');
-  // commentLoaderElement.classList.add('hidden');
-  // const closeBigPicture = () => {
-  //   bigPictureElement.classList.add('hidden');
-  //   bodyElements.classList.remove('modal-open');
-  //   document.removeEventListener('keydown', onDocumentKeydown);
-  // };
-  // bigPictureClose.addEventListener('click', closeBigPicture);
->>>>>>> 4e45a33 (Затык с заданием 8.14)
-=======
-  commentsSocial.classList.add('hidden');
-  commentsLoad.classList.add('hidden');
->>>>>>> 8731489 (Исправил ошибки  и работаю над списками комент)
-=======
->>>>>>> 2747420 (сделал коменты 8.15)
 
   //обработчик закрытия Esс
   const onDocumentKeydown = (evt) => {
     if (isEscapeKey(evt)) {
       evt.preventDefault();
-<<<<<<< HEAD
-<<<<<<< HEAD
       // eslint-disable-next-line no-use-before-define
-=======
->>>>>>> 4e45a33 (Затык с заданием 8.14)
-=======
-      // eslint-disable-next-line no-use-before-define
->>>>>>> 8731489 (Исправил ошибки  и работаю над списками комент)
       closeBigPicture();
     }
   };
@@ -63,36 +21,7 @@ const generateBigPicture = (photos) => {
   // открытие модального окна
   const openBigPicture = () => {
     bigPictureElement.classList.remove('hidden');
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     document.body.classList.add('modal-open');
-=======
-    commentsSocial.classList.add('hidden');
-    commentsLoad.classList.add('hidden');
-    bodyElements.classList.add('modal-open');
->>>>>>> 4e45a33 (Затык с заданием 8.14)
-=======
-    bodyElement.classList.add('modal-open');
->>>>>>> 8731489 (Исправил ошибки  и работаю над списками комент)
-=======
-    document.classList.add('modal-open');
-    commentsSocial.classList.add('hidden');
-    commentsLoad.classList.add('hidden');
->>>>>>> 2747420 (сделал коменты 8.15)
-=======
-    document.classList.add('modal-open');
-    commentsSocial.classList.add('hidden');
-    commentsLoad.classList.add('hidden');
-=======
-    document.body.classList.add('modal-open');
->>>>>>> acfe163412aa14f3c32e147a4c7338c282007419
->>>>>>> 1e0a156 (123)
-=======
-    document.body.classList.add('modal-open');
->>>>>>> c55eb1d (8.15)
     document.addEventListener('keydown', onDocumentKeydown);
   };
 
@@ -102,24 +31,8 @@ const generateBigPicture = (photos) => {
 
     bigPictureClose.addEventListener('click', () =>{
       bigPictureElement.classList.add('hidden');
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
       document.body.classList.remove('modal-open');
       document.removeEventListener('keydown',onDocumentKeydown);
-=======
-      bodyElement.classList.remove('modal-open');
-      bodyElement.classList.removeEventListener('keydown',onDocumentKeydown);
-=======
-      document.body.classList.remove('modal-open');
-      document.removeEventListener('keydown',onDocumentKeydown);
->>>>>>> acfe163412aa14f3c32e147a4c7338c282007419
->>>>>>> 1e0a156 (123)
-=======
-      document.body.classList.remove('modal-open');
-      document.removeEventListener('keydown',onDocumentKeydown);
->>>>>>> c55eb1d (8.15)
     });
   };
 
@@ -127,67 +40,20 @@ const generateBigPicture = (photos) => {
   const getBigPicture = (pictureId) => {
     const index = photos.findIndex((photo) =>pictureId === photo.id.toString());
     const { url, likes, comments, description} = photos[index];
-=======
-      bodyElements.classList.addEventListener('keydown',onDocumentKeydown);
-      onDocumentKeydown();
-=======
-      bodyElement.classList.remove('modal-open');
-      bodyElement.classList.removeEventListener('keydown',onDocumentKeydown);
-<<<<<<< HEAD
-
->>>>>>> 8731489 (Исправил ошибки  и работаю над списками комент)
-=======
->>>>>>> 7138da7 (Отправляю на провекру 8.14 и 8.15)
-    });
-  };
-
-  //создание элементов для большого изображения
-  const getBigPicture = (pictureId) => {
-<<<<<<< HEAD
-    const index = photos.findIndex((picture) => picture.id.toString() === pictureId);
-    const { url, likes, comments, description} = fullPicture[index];
-
->>>>>>> 4e45a33 (Затык с заданием 8.14)
-=======
-    const index = photos.findIndex((photo) =>pictureId === photo.id.toString());
-    const { url, likes, comments, description} = photos[index];
->>>>>>> 8731489 (Исправил ошибки  и работаю над списками комент)
 
     bigPictureElement.querySelector('.big-picture__img img').src = url;
     bigPictureElement.querySelector('.likes-count').textContent = likes;
     bigPictureElement.querySelector('.social__comment-shown-count').textContent = comments.length;
     bigPictureElement.querySelector('.social__comment-total-count').textContent = comments.length;
     bigPictureElement.querySelector('.social__caption').textContent = description;
-<<<<<<< HEAD
-<<<<<<< HEAD
     getListComments(photos[index].comments);
   };
 
   // функция при клике на миниатюру
-<<<<<<< HEAD
   const onClickPhoto = (evt) => {
     const pictureElement = evt.target.closest('.picture');
     if (pictureElement){
       const pictured = evt.target.dataset.pictureId;
-=======
-=======
-    getListComments(photos[index].comments);
->>>>>>> 8731489 (Исправил ошибки  и работаю над списками комент)
-  };
-
-
-  //* функция при клике на миниатюру
-=======
->>>>>>> 7138da7 (Отправляю на провекру 8.14 и 8.15)
-  const onClickPhoto = (evt) => {
-    const pictureElement = evt.target.closest('.picture');
-    if (pictureElement){
-<<<<<<< HEAD
-      const pictured = pictureElement.dataset.generatePhoto;
->>>>>>> 4e45a33 (Затык с заданием 8.14)
-=======
-      const pictured = evt.target.dataset.pictureId;
->>>>>>> 8731489 (Исправил ошибки  и работаю над списками комент)
       getBigPicture(pictured);
       openBigPicture();
     }
@@ -195,33 +61,12 @@ const generateBigPicture = (photos) => {
 
 
   //Обработчик для открытия фото
-<<<<<<< HEAD
-<<<<<<< HEAD
   containerPictures.addEventListener('click', onClickPhoto);
 
   //Обработчик для закрытия фото
-<<<<<<< HEAD
-=======
-  containerPictures.addEventListener('click', onClickPhoto());
-=======
-  containerPictures.addEventListener('click', onClickPhoto);
->>>>>>> b9891b7 (Исправления после созвона)
-
-  //Обработчик для закрытия фото
-
->>>>>>> 4e45a33 (Затык с заданием 8.14)
-=======
->>>>>>> 7138da7 (Отправляю на провекру 8.14 и 8.15)
   closeBigPictureElement.addEventListener('click', () =>{
     closeBigPicture();
   });
 };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 4e45a33 (Затык с заданием 8.14)
-=======
->>>>>>> 7138da7 (Отправляю на провекру 8.14 и 8.15)
 export {generateBigPicture};
