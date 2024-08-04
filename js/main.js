@@ -5,3 +5,4 @@ import './upload-form-modal.js';
 
 generateMiniatures(photos);
 generateBigPicture(photos);
+

@@ -1,3 +1,4 @@
+
 import { initEffectPicture, resetEffectPicture } from './effect-picture';
 import { resetScalePicture } from './scale-picture';
 
@@ -33,6 +34,7 @@ const getLoadImage = () => {
 const getCloseLoad = () => {
   pristine.reset();
   form.reset();
+
   resetScalePicture();
   resetEffectPicture();
   uploadOverlayElement.classList.add('hidden');
@@ -108,4 +110,5 @@ function onDocumentKeydown (evt) {
 uploadInputElement.addEventListener('change', onPopupOpen);
 buttonCloseUploadElement.addEventListener('click', onPopupClose);
 form.addEventListener('submit', onFormSubmit);
+
 initEffectPicture();
