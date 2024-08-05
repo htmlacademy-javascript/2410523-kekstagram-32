@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="vendor/nouislider/nouislider.css">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
@@ -237,6 +238,27 @@
   <script src="vendor/pristine/pristine.min.js"></script>
   <script src="js/main.js" type="module"> </script>
 
+  <div class="big-picture hidden">
+    <div class="big-picture__img">
+      <img src="" alt="Full size image">
+    </div>
+    <button class="big-picture__close">X</button>
+    <div class="social">
+      <p class="social__caption"></p>
+      <div class="social__comment-count hidden">
+        <span class="social__comment-shown-count"></span> из <span class="social__comment-total-count"></span> комментариев
+      </div>
+      <ul class="social__comments"></ul>
+      <button class="comments-loader hidden">Загрузить еще</button>
+      <div class="social__likes">
+        <span class="likes-count"></span> лайков
+      </div>
+    </div>
+  </div>
+
+  <script src="vendor/nouislider/nouislider.js"></script>
+  <script src="vendor/pristine/pristine.min.js"></script>
+  <script src="js/main.js" type="module"> </script>
 </body>
 
 </html>
