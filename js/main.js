@@ -1,41 +1,26 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 10cd37f (fixed fixed 5.15)
-import {photos} from './data.js';
+
 import {generateMiniatures} from './miniatures.js';
 import {generateBigPicture} from'./big-picture.js';
+import {setOnFormSubmit, getCloseLoad} from './upload-form-modal.js';
+import {getData, sendData} from './api.js';
+import {showAlert} from './utils.js';
+import {showSuccessMessage, showErrorMessage} from './message.js';
 
-generateMiniatures(photos);
-generateBigPicture(photos);
-<<<<<<< HEAD
-=======
-import {generatePhoto} from './data.js';
-import {generateMiniatures} from './miniatures.js';
-import {generateBigPicture} from'./big-picture.js';
 
-generateMiniatures(generatePhoto);
-<<<<<<< HEAD
-
->>>>>>> 61e95ab (Работаю над 8.1 ч3)
-=======
-generateBigPicture(generatePhoto);
->>>>>>> 4e45a33 (Затык с заданием 8.14)
-=======
-import {photos} from './data.js';
-import {generateMiniatures} from './miniatures.js';
-import {generateBigPicture} from'./big-picture.js';
-
-generateMiniatures(photos);
-generateBigPicture(photos);
->>>>>>> b9891b7 (Исправления после созвона)
-=======
-import {getUsersPhoto} from './data.js';
-import {generateMiniatures} from './miniatures.js';
-
-generateMiniatures(getUsersPhoto());
->>>>>>> f7b2044 (Сделал дз 7)
-=======
->>>>>>> 10cd37f (fixed fixed 5.15)
+//Получение данных из сервера
+setOnFormSubmit(async (data) => {
+  try {
+    await sendData(data);
+    getCloseLoad();
+    showSuccessMessage();
+  } catch {
+    showErrorMessage();
+  }
+});
+try {
+  const data = await getData();
+  generateMiniatures(data);
+  generateBigPicture(data);
+} catch {
+  showAlert();
+}
