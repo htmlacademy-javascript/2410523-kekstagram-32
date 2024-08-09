@@ -1,4 +1,4 @@
-const userImage = document.querySelector('.pictures');
+const userImageElement = document.querySelector('.pictures');
 const miniaturesTemplate = document.querySelector('#picture').content.querySelector('.picture');
 
 const createImages = (picture) => {
@@ -15,13 +15,14 @@ const createImages = (picture) => {
 
 
 const generateMiniatures = (pictures) => {
+  userImageElement.querySelectorAll('.picture').forEach((element) => element.remove());
   const fragment = document.createDocumentFragment();
   pictures.forEach((picture) => {
     const miniature = createImages(picture);
     fragment.append(miniature);
   });
 
-  userImage.append(fragment);
+  userImageElement.append(fragment);
 };
 
 
