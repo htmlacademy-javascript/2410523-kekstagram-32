@@ -18,8 +18,8 @@ setOnFormSubmit(async (data) => {
 });
 try {
   const data = await getData();
-  const debounceGenerateThumbnails = debounce(generateMiniatures);
-  initFilters(data, debounceGenerateThumbnails);
+  const debounceGenerateMiniatures = debounce(generateMiniatures);
+  initFilters(data, debounceGenerateMiniatures);
   generateMiniatures(getFilteredPictures());
   generateMiniatures(data);
   generateBigPicture(data);

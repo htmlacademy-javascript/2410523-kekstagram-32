@@ -4,7 +4,6 @@ import { getListComments } from './comments.js';
 const generateBigPicture = (photos) => {
   const containerPictures = document.querySelector('.pictures');
   const bigPictureElement = document.querySelector('.big-picture');
-  const bigPictureClose = document.querySelector('.big-picture__cancel');
   const closeBigPictureElement = document.querySelector('.big-picture__cancel');
 
 
@@ -29,12 +28,12 @@ const generateBigPicture = (photos) => {
   // Закрытие модального окна
   const closeBigPicture = () => {
 
-    bigPictureClose.addEventListener('click', () =>{
-      bigPictureElement.classList.add('hidden');
-      document.body.classList.remove('modal-open');
-      document.removeEventListener('keydown',onDocumentKeydown);
-    });
+    //closeBigPictureElement.addEventListener('click', () =>{
+    bigPictureElement.classList.add('hidden');
+    document.body.classList.remove('modal-open');
+    document.removeEventListener('keydown',onDocumentKeydown);
   };
+
 
   //создание элементов для большого изображения
   const getBigPicture = (pictureId) => {

@@ -9,6 +9,7 @@ const Method = {
   POST: 'POST',
 };
 
+
 //взаимодействие с сервером
 const load = (route, method = Method.GET, body = null) =>
   fetch(`${BASE_URL}${route}`, {method, body})
