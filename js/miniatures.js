@@ -1,8 +1,8 @@
 const userImageElement = document.querySelector('.pictures');
-const miniaturesTemplate = document.querySelector('#picture').content.querySelector('.picture');
+const miniaturesTemplateElement = document.querySelector('#picture').content.querySelector('.picture');
 
 const createImages = (picture) => {
-  const imageElement = miniaturesTemplate.cloneNode(true);
+  const imageElement = miniaturesTemplateElement.cloneNode(true);
   const itemImageElement = imageElement.querySelector('.picture__img');
   itemImageElement.src = picture.url;
   itemImageElement.alt = picture.description;

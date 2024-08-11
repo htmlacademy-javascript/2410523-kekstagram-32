@@ -14,7 +14,7 @@ const effectPreviewElement = form.querySelectorAll('.effects__preview');
 const MAX_HASHTAGS = 5;
 const VALID_SYMBOLS = /^#[a-zа-яё0-9]{1,19}$/i;
 const FILE_TYPES = ['jpeg', 'jpg', 'png'];
-const errorText = {
+const ErrorText = {
   INVALID_COUNT: `Максимум ${MAX_HASHTAGS} хэш-тегов`,
   NOT_UNIQUE: 'Хеш-теги должны быть уникальными',
   INVALID_PATTERN: 'Неправильный хеш-тег'
@@ -78,21 +78,21 @@ const setOnFormSubmit = (callback) => {
 pristine.addValidator(
   inputHeshtagsElement,
   hasValidCount,
-  errorText.INVALID_COUNT,
+  ErrorText.INVALID_COUNT,
   3,
   true
 );
 pristine.addValidator(
   inputHeshtagsElement,
   hasUniqueTags,
-  errorText.NOT_UNIQUE,
+  ErrorText.NOT_UNIQUE,
   2,
   true
 );
 pristine.addValidator(
   inputHeshtagsElement,
   hasValidTags,
-  errorText.INVALID_PATTERN,
+  ErrorText.INVALID_PATTERN,
   1,
   true
 );

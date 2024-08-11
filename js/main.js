@@ -4,7 +4,7 @@ import {setOnFormSubmit, getCloseLoad} from './upload-form-modal.js';
 import {getData, sendData} from './api.js';
 import {showAlert, debounce} from './utils.js';
 import {showSuccessMessage, showErrorMessage} from './message.js';
-import { initFilters, getFilteredPictures } from './filters-picture.js';
+import { initFilters} from './filters-picture.js';
 
 //Получение данных из сервера
 setOnFormSubmit(async (data) => {
@@ -18,10 +18,8 @@ setOnFormSubmit(async (data) => {
 });
 try {
   const data = await getData();
-  const debounceGenerateMiniatures = debounce(generateMiniatures);
-  initFilters(data, debounceGenerateMiniatures);
-  generateMiniatures(getFilteredPictures());
-  generateMiniatures(data);
+  const debounceGenerateThumbnails = debounce(generateMiniatures);
+  initFilters(data, debounceGenerateThumbnails);
   generateBigPicture(data);
 } catch {
   showAlert();

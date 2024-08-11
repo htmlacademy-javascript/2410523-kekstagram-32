@@ -1,3 +1,5 @@
+import { generateMiniatures } from './miniatures';
+
 const PICTURES_COUNT = 10;
 const Filter = {
   DEFAULT: 'filter-default',
@@ -47,6 +49,7 @@ const setOnFilterClick = (callback) => {
 const initFilters = (loadedPictires, callback) => {
   filterElement.classList.remove('img-filters--inactive');
   pictures = [...loadedPictires];
+  generateMiniatures(pictures);
   setOnFilterClick(callback);
 };
 

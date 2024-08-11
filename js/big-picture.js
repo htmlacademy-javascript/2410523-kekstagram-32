@@ -2,7 +2,7 @@ import { isEscapeKey } from './utils.js';
 import { getListComments } from './comments.js';
 
 const generateBigPicture = (photos) => {
-  const containerPictures = document.querySelector('.pictures');
+  const containerPicturesElement = document.querySelector('.pictures');
   const bigPictureElement = document.querySelector('.big-picture');
   const closeBigPictureElement = document.querySelector('.big-picture__cancel');
 
@@ -60,7 +60,7 @@ const generateBigPicture = (photos) => {
 
 
   //Обработчик для открытия фото
-  containerPictures.addEventListener('click', onClickPhoto);
+  containerPicturesElement.addEventListener('click', onClickPhoto);
 
   //Обработчик для закрытия фото
   closeBigPictureElement.addEventListener('click', () =>{
