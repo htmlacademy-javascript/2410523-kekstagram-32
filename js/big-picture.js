@@ -2,9 +2,8 @@ import { isEscapeKey } from './utils.js';
 import { getListComments } from './comments.js';
 
 const generateBigPicture = (photos) => {
-  const containerPictures = document.querySelector('.pictures');
+  const containerPicturesElement = document.querySelector('.pictures');
   const bigPictureElement = document.querySelector('.big-picture');
-  const bigPictureClose = document.querySelector('.big-picture__cancel');
   const closeBigPictureElement = document.querySelector('.big-picture__cancel');
 
 
@@ -29,12 +28,12 @@ const generateBigPicture = (photos) => {
   // Закрытие модального окна
   const closeBigPicture = () => {
 
-    bigPictureClose.addEventListener('click', () =>{
-      bigPictureElement.classList.add('hidden');
-      document.body.classList.remove('modal-open');
-      document.removeEventListener('keydown',onDocumentKeydown);
-    });
+    //closeBigPictureElement.addEventListener('click', () =>{
+    bigPictureElement.classList.add('hidden');
+    document.body.classList.remove('modal-open');
+    document.removeEventListener('keydown',onDocumentKeydown);
   };
+
 
   //создание элементов для большого изображения
   const getBigPicture = (pictureId) => {
@@ -61,7 +60,7 @@ const generateBigPicture = (photos) => {
 
 
   //Обработчик для открытия фото
-  containerPictures.addEventListener('click', onClickPhoto);
+  containerPicturesElement.addEventListener('click', onClickPhoto);
 
   //Обработчик для закрытия фото
   closeBigPictureElement.addEventListener('click', () =>{

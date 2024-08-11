@@ -6,7 +6,7 @@ const sliderElement = modalElement.querySelector('.effect-level__slider');
 const sliderContainerElement = modalElement.querySelector('.img-upload__effect-level');
 
 // описание сущетвующих эффектов
-const effectPicture = {
+const EffectPicture = {
   DEFAULT: 'none',
   CHROME : 'chrome',
   SEPIA : 'sepia',
@@ -16,75 +16,75 @@ const effectPicture = {
 };
 
 // описание какие стили приминяются к эффектам
-const effectToFilters = {
-  [effectPicture.CHROME] : {
+const EffectToFilters = {
+  [EffectPicture.CHROME] : {
     style:'grayscale',
     unit: '',
   },
 
-  [effectPicture.SEPIA]: {
+  [EffectPicture.SEPIA]: {
     style:'sepia',
     unit: '',
   },
 
-  [effectPicture.MARVIN]: {
+  [EffectPicture.MARVIN]: {
     style:'invert',
     unit: '%',
   },
 
-  [effectPicture.PHOBOS]: {
+  [EffectPicture.PHOBOS]: {
     style:'blur',
     unit:'px',
   },
 
-  [effectPicture.HEAT]: {
+  [EffectPicture.HEAT]: {
     style:'brightness',
     unit:'',
   },
 };
 
 // описание значения и шаг для слайдера noUiSlider
-const effectToSliderOptions = {
-  [effectPicture.DEFAULT]: {
+const EffectToSliderOptions = {
+  [EffectPicture.DEFAULT]: {
     min:0,
     max: 100,
     step: 1,
   },
 
-  [effectPicture.CHROME]: {
+  [EffectPicture.CHROME]: {
     min: 0,
     max: 1,
     step: 0.1,
   },
 
-  [effectPicture.SEPIA]: {
+  [EffectPicture.SEPIA]: {
     min:0,
     max:1,
     step:0.1,
   },
 
-  [effectPicture.MARVIN]: {
+  [EffectPicture.MARVIN]: {
     min: 0,
     max: 100,
     step:1,
   },
 
-  [effectPicture.PHOBOS]: {
+  [EffectPicture.PHOBOS]: {
     min:0,
     max:3,
     step:0.1,
   },
 
-  [effectPicture.HEAT]: {
+  [EffectPicture.HEAT]: {
     min: 1,
     max:3,
     step: 0.1,
   },
 };
 //
-let choosenEffect = effectPicture.DEFAULT;
+let choosenEffect = EffectPicture.DEFAULT;
 
-const isDefault = () => choosenEffect === effectPicture.DEFAULT;
+const isDefault = () => choosenEffect === EffectPicture.DEFAULT;
 
 //примение фильтров с полученными значениями
 const setImageStyle = () => {
@@ -93,7 +93,7 @@ const setImageStyle = () => {
     return;
   }
   const {value} = effectValueElement ;
-  const {style, unit} = effectToFilters[choosenEffect];
+  const {style, unit} = EffectToFilters[choosenEffect];
   imagePreviewElement.style.filter = `${style}(${value}${unit})`;
 };
 
@@ -140,7 +140,7 @@ const setSlider = () => {
   if (isDefault()) {
     closeSlider();
   } else {
-    updateSlider(effectToSliderOptions[choosenEffect]);
+    updateSlider(EffectToSliderOptions[choosenEffect]);
     openSlider();
   }
 };
@@ -153,7 +153,7 @@ const setEffect = (effect) => {
 
 //сбрасывает эффект до default
 const resetEffectPicture = () => {
-  setEffect(effectPicture.DEFAULT);
+  setEffect(EffectPicture.DEFAULT);
 };
 
 const onEffectsChange = (evt) => {
@@ -161,7 +161,7 @@ const onEffectsChange = (evt) => {
 };
 //Инициализирует эффекты
 const initEffectPicture = () => {
-  createSlider(effectToSliderOptions[choosenEffect]);
+  createSlider(EffectToSliderOptions[choosenEffect]);
   effectsElement.addEventListener('change', onEffectsChange);
 };
 
