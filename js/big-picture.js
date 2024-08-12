@@ -2,9 +2,8 @@ import { isEscapeKey } from './utils.js';
 import { getListComments } from './comments.js';
 
 const generateBigPicture = (photos) => {
-  const containerPictures = document.querySelector('.pictures');
+  const containerPicturesElement = document.querySelector('.pictures');
   const bigPictureElement = document.querySelector('.big-picture');
-  const bigPictureClose = document.querySelector('.big-picture__cancel');
   const closeBigPictureElement = document.querySelector('.big-picture__cancel');
 
 
@@ -17,7 +16,6 @@ const generateBigPicture = (photos) => {
     }
   };
 
-
   // открытие модального окна
   const openBigPicture = () => {
     bigPictureElement.classList.remove('hidden');
@@ -25,22 +23,17 @@ const generateBigPicture = (photos) => {
     document.addEventListener('keydown', onDocumentKeydown);
   };
 
-
   // Закрытие модального окна
   const closeBigPicture = () => {
-
-    bigPictureClose.addEventListener('click', () =>{
-      bigPictureElement.classList.add('hidden');
-      document.body.classList.remove('modal-open');
-      document.removeEventListener('keydown',onDocumentKeydown);
-    });
+    bigPictureElement.classList.add('hidden');
+    document.body.classList.remove('modal-open');
+    document.removeEventListener('keydown',onDocumentKeydown);
   };
 
   //создание элементов для большого изображения
   const getBigPicture = (pictureId) => {
     const index = photos.findIndex((photo) =>pictureId === photo.id.toString());
     const { url, likes, comments, description} = photos[index];
-
     bigPictureElement.querySelector('.big-picture__img img').src = url;
     bigPictureElement.querySelector('.likes-count').textContent = likes;
     bigPictureElement.querySelector('.social__comment-shown-count').textContent = comments.length;
@@ -59,9 +52,8 @@ const generateBigPicture = (photos) => {
     }
   };
 
-
   //Обработчик для открытия фото
-  containerPictures.addEventListener('click', onClickPhoto);
+  containerPicturesElement.addEventListener('click', onClickPhoto);
 
   //Обработчик для закрытия фото
   closeBigPictureElement.addEventListener('click', () =>{
