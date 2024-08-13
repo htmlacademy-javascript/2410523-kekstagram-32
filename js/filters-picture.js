@@ -1,6 +1,7 @@
 import { generateMiniatures } from './miniatures';
 
 const PICTURES_COUNT = 10;
+
 const Filter = {
   DEFAULT: 'filter-default',
   RANDOM: 'filter-random',
@@ -8,9 +9,9 @@ const Filter = {
 };
 
 const filterElement = document.querySelector('.img-filters');
+
 let currentFilter = Filter.DEFAULT;
 let pictures = [];
-
 const sortRandomly = () => Math.random() - 0.5;
 
 //Сортировка по коментариям
@@ -27,7 +28,6 @@ const getFilteredPictures = () => {
       return[...pictures];
   }
 };
-
 
 //Обработчик клика по фильтрам
 const setOnFilterClick = (callback) => {

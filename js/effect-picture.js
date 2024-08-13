@@ -81,7 +81,7 @@ const EffectToSliderOptions = {
     step: 0.1,
   },
 };
-//
+
 let choosenEffect = EffectPicture.DEFAULT;
 
 const isDefault = () => choosenEffect === EffectPicture.DEFAULT;

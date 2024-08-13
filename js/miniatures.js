@@ -9,10 +9,8 @@ const createImages = (picture) => {
   imageElement.querySelector('.picture__likes').textContent = picture.likes;
   imageElement.querySelector('.picture__comments').textContent = picture.comments.length;
   itemImageElement.dataset.pictureId = picture.id;
-
   return imageElement;
 };
-
 
 const generateMiniatures = (pictures) => {
   userImageElement.querySelectorAll('.picture').forEach((element) => element.remove());
@@ -24,6 +22,5 @@ const generateMiniatures = (pictures) => {
 
   userImageElement.append(fragment);
 };
-
 
 export{createImages, generateMiniatures};
