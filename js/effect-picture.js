@@ -84,8 +84,6 @@ const EffectToSliderOptions = {
 
 let choosenEffect = EffectPicture.DEFAULT;
 
-let choosenEffect = EffectPicture.DEFAULT;
-
 const isDefault = () => choosenEffect === EffectPicture.DEFAULT;
 
 //примение фильтров с полученными значениями

@@ -24,9 +24,6 @@ const generateBigPicture = (photos) => {
 
   // Закрытие модального окна
   const closeBigPicture = () => {
-
-    //closeBigPictureElement.addEventListener('click', () =>{
-
     bigPictureElement.classList.add('hidden');
     document.body.classList.remove('modal-open');
     document.removeEventListener('keydown',onDocumentKeydown);
