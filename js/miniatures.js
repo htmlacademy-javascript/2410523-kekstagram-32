@@ -19,6 +19,7 @@ const generateMiniatures = (pictures) => {
     const miniature = createImages(picture);
     fragment.append(miniature);
   });
+
   userImageElement.append(fragment);
 };
 

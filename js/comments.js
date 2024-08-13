@@ -22,6 +22,7 @@ const getUserComment = ({avatar, name, message }) => {
 const getLoadComments = () => {
   const endIndex = Math.min(startIndex + NEXT_NUBERS_QTY, NumbersComments.length);
   commetsShownElement.textContent = endIndex;
+
   NumbersComments.slice(startIndex, endIndex).forEach((element) => {
     const listComment = getUserComment(element);
     socialListCommentsElement.append(listComment);

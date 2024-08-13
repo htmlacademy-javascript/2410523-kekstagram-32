@@ -1,16 +1,28 @@
 import { generateMiniatures } from './miniatures';
+
 const PICTURES_COUNT = 10;
 const Filter = {
   DEFAULT: 'filter-default',
   RANDOM: 'filter-random',
   DISCUSSED: 'filter-discussed',
 };
+
 const filterElement = document.querySelector('.img-filters');
 let currentFilter = Filter.DEFAULT;
 let pictures = [];
 const sortRandomly = () => Math.random() - 0.5;
 //Сортировка по коментариям
 const sortByComments = (pictureA, pictureB) => pictureB.comments.length - pictureA.comments.length;
+
+const filterElement = document.querySelector('.img-filters');
+let currentFilter = Filter.DEFAULT;
+let pictures = [];
+
+const sortRandomly = () => Math.random() - 0.5;
+
+//Сортировка по коментариям
+const sortByComments = (pictureA, pictureB) => pictureB.comments.length - pictureA.comments.length;
+
 //Функция с фильтрацией
 const getFilteredPictures = () => {
   switch (currentFilter) {
@@ -39,6 +51,7 @@ const setOnFilterClick = (callback) => {
     callback(getFilteredPictures());
   });
 };
+
 const initFilters = (loadedPictires, callback) => {
   filterElement.classList.remove('img-filters--inactive');
   pictures = [...loadedPictires];

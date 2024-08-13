@@ -6,7 +6,6 @@ const generateBigPicture = (photos) => {
   const bigPictureElement = document.querySelector('.big-picture');
   const closeBigPictureElement = document.querySelector('.big-picture__cancel');
 
-
   //обработчик закрытия Esс
   const onDocumentKeydown = (evt) => {
     if (isEscapeKey(evt)) {
@@ -25,6 +24,9 @@ const generateBigPicture = (photos) => {
 
   // Закрытие модального окна
   const closeBigPicture = () => {
+
+    //closeBigPictureElement.addEventListener('click', () =>{
+
     bigPictureElement.classList.add('hidden');
     document.body.classList.remove('modal-open');
     document.removeEventListener('keydown',onDocumentKeydown);
